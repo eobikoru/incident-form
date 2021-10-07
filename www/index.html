@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    
+    <title>wordpress</title>
+</head>
+<body>
+   
+
+    <div class="app-page" data-page="home">
+        <div class="app-topbar">
+          <div class="app-title">HOME</div>
+        </div>
+        <div class="app-content">
+          <div class="app-section">
+            <div class="app-button" data-target="page2">FORM PAGE</div>
+          </div>
+        
+  
+      <div class="app-page" data-page="page2">
+        <div class="app-topbar">
+          <div class="app-button left" data-back data-autotitle></div>
+          <div class="app-title">FORM PAGE</div>
+        </div>
+        <div class="app-content">
+          <div class="app-content">
+            <div class="d-flex justify-content-center pt-2" id="spinner">
+            <div class="spinner-border text-primary"></div>
+            </div>
+            <div class="container pt-2" id="mainDiv">
+            </div>
+            <div>
+              <input type="hidden" id="ICORF_email_address" name="ICORF_email_address" value="" />
+              <input type="hidden" id="ICORF_password" name="ICORF_password" value="" />
+              <input type="hidden" id="ICORF_EventID" name="ICORF_EventID" value="49806" />
+              <input type="hidden" id="ICORF_PubGUID" name="ICORF_PubGUID" value="AF523409-BA31-4CC4-BE3D-8FAAB0355DD1" />
+              <input type="hidden" id="ICORF_EventName" name="ICORF_EventName" value="Big Honkin' IR" />
+              <input type="hidden" id="ICORF_PlanName" name="ICORF_PlanName" value="JB Dev Test Plan 54" />
+              <input type="hidden" id="ICORF_DeviceName" name="ICORF_DeviceName" value="JB MacBook Pro" />
+              <input type="hidden" id="ICORF_DeviceModel" name="ICORF_DeviceModel" value="MacBook Pro" />
+              <input type="hidden" id="ICORF_DeviceOS" name="ICORF_DeviceOS" value="OSX El Capitan" />
+              <input type="hidden" id="ICORF_DeviceVersion" name="ICORF_DeviceVersion" value="10.11.5" />
+              <!-- <input type="hidden" id="ICORF_DeviceTime" name="ICORF_DeviceTime" value="0" /> -->
+              <input type="hidden" id="ICORF_DeviceTZoffset" name="ICORF_DeviceTZoffset" value="0" />
+              <!-- <input type="hidden" id="ICORF_Longitude" name="ICORF_Longitude" value="0" /> -->
+              <!-- <input type="hidden" id="ICORF_Latitude" name="ICORF_Latitude" value="0" /> -->
+              <input type="hidden" id="ICORF_Altitude" name="ICORF_Altitude" value="" />
+              <input type="hidden" id="ICORF_HorizAccuracy" name="ICORF_HorizAccuracy" value="" />
+              <input type="hidden" id="ICORF_VertAccuracy" name="ICORF_VertAccuracy" value="0" />
+              <input type="hidden" id="ICORF_VendorUUID" name="ICORF_VendorUUID" value="ICC-12345" />
+              <input type="hidden" id="ICORF_BundleID" name="ICORF_BundleID" value="com.incaseofcrisis.icodev" />
+              <input type="hidden" id="ICORF_AppVersion" name="ICORF_AppVersion" value="1.0" />
+              <input type="hidden" id="ICORF_HTMLform" name="ICORF_HTMLform" value="Nothing to see here..." />
+  
+              <h3>INCIDENT FORM</h3>
+              <p >
+                  Current position:<br>
+                  <b>Current Time</b>: <input type="text" id="ICORF_DeviceTime" name="ICORF_DeviceTime" value="" /><br>
+                  <b>Lat</b>: <input type="text" class="lat1" id="ICORF_Latitude" name="ICORF_Latitude" value="" /><br>
+                  <b>Long</b>: <input type="text" class="long1" id="ICORF_Longitude" name="ICORF_Longitude" value="" />
+              </p>
+
+
+              <div>
+  
+                <p><strong>Upload a photo of the incident:</strong>
+                    <br />
+                    <input accept="image/*"  id="photo1"  capture="camera" name="fileUpload" type="file" />
+                </p>
+                </div>
+              <div style="font-size: 90%;">
+                  <p id="location1">
+                      <strong>Location of incident:</strong><br />
+                      <select name="Location">
+                          <option value="Bus Stop">Bus Stop</option>
+                          <option value="On Bus">On Bus</option>
+                      </select> 
+                  </p>
+  
+                  <p><strong>Name of victim(s)</strong>:
+                      <br />
+                      <input id="txtName"  id="name1" name="txtName" style="width: 50%; font-size: 110%;" type="text" />
+                  </p>
+                  <p><strong>Describe the incident</strong>:
+                    <br />
+                    <textarea name="Description" rows="12" style="width: 95%; font-size: 110%;"></textarea>
+                </p>
+                    
+                     <button id="submitButton" name="submitButton" type="button" onclick="decideDisplayModal(); return false();">
+                        Submit This Report</button>
+            
+            </div>
+            <div id="overlay"></div>
+            <div id="modalMsg">
+                <p >
+                    This Incident Report will be submitted in
+                    <span id="ICORF_remainingSeconds"></span> seconds.
+                    <br/>
+                    <canvas id="myCanvas" width="100" height="100" style="display: block; margin-left: auto; margin-right: auto;">no canvas support</canvas>
+                    <br/> To stop this from happening, please press
+                    <br />
+                    <button type="button" onclick="return RemoveModal();" style="font-size: 18px; font-weight: bold; background: #0B1E7D; color: #fff; padding: 5px; border-radius: 8px; border: 2px solid #888; width: 100%; height: 2em;">Cancel Submission</button>
+                </p>
+            </div>
+
+       
+    </div>
+</form>
+ </div>
+        <script src="cordova.js "></script>
+        <script src="js/jquery-3.6.0.js "></script>
+        <script src="js/app.min.js"></script>
+        <script src="js/index.js"></script>
+</body>
+</html>

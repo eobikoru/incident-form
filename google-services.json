@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "725632932817",
+    "project_id": "fir-cordova-dd5ce",
+    "storage_bucket": "fir-cordova-dd5ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725632932817:android:7540075cd23f54d9a8def0",
+        "android_client_info": {
+          "package_name": "com.emeka.www"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "725632932817-lan8e86n5l24mf0skvo8de5vs0668ocq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMnEUZeh3a_vH5iv_XxsLkmMcQR8wJc3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725632932817-lan8e86n5l24mf0skvo8de5vs0668ocq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
